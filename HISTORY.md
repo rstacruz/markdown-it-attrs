@@ -1,3 +1,8 @@
+## [v1.2.1]
+> Jan  3, 2016
+
+- Fix compatibility with older Node.js versions.
+
 ## [v1.2.0]
 > Nov 12, 2015
 
@@ -39,3 +44,4 @@
 [v1.0.0]: https://github.com/rstacruz/markdown-it-decorate/compare/v0.3.1...v1.0.0
 [v1.1.0]: https://github.com/rstacruz/markdown-it-decorate/compare/v1.0.0...v1.1.0
 [v1.2.0]: https://github.com/rstacruz/markdown-it-decorate/compare/v1.1.0...v1.2.0
+[v1.2.1]: https://github.com/rstacruz/markdown-it-decorate/compare/v1.2.0...v1.2.1
