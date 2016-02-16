@@ -17,7 +17,7 @@ This is some text.
 
 ```js
 const md = require('markdown-it')
-  .use(require('markdown-it-decorate'), opts)
+  .use(require('markdown-it-decorate'))
 ```
 
 ## Annotating elements
