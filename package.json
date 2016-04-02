@@ -9,7 +9,7 @@
   "dependencies": {},
   "devDependencies": {
     "istanbul": "0.4.2",
-    "markdown-it": "6.0.0",
+    "markdown-it": "6.0.1",
     "standard": "5.4.1",
     "tap-spec": "4.1.1",
     "tape": "4.4.0"
