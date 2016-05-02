@@ -10,7 +10,7 @@
   "devDependencies": {
     "istanbul": "0.4.3",
     "markdown-it": "6.0.0",
-    "standard": "6.0.5",
+    "standard": "7.0.0",
     "tap-spec": "4.1.1",
     "tape": "4.4.0"
   },
