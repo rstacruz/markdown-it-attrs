@@ -49,9 +49,9 @@ You can specify the element name to decorate. (See [§ Disambiguating](#disambig
 
 | Source | Output |
 |----|----|
-| `# Hi *world* <!-- {.red} -->` | `<h1>Hi <em class='red'>world</em></h1>` |
-| `# Hi *world* <!-- {h1:.red} -->` | `<h1 class='red'>Hi <em>world</em></h1>` |
-| `# *Hi* *world* <!-- {em^1:.red} -->` | `<h1><em class='red'>Hi</em> <em>world</em></h1>` |
+| `> > Hi *world* <!-- {.red} -->` | `<blockquote><blockquote>Hi <em class='red'>world</em>...` |
+| `> > Hi *world* <!-- {blockquote:.red} -->` | `<blockquote><blockquote class='red'>Hi <em>world</em>...` |
+| `> > Hi *world* <!-- {blockquote^1:.red} -->` | `<blockquote class='red'><blockquote>Hi <em>world</em>...` |
 
 ## Annotating elements
 
