@@ -170,7 +170,7 @@ markdown-it-decorate is inspired by the design of those features and improves on
 
 ## Thanks
 
-**markdown-it-decorate** © 2015+, Rico Sta. Cruz. Released under the [MIT] License.<br>
+**markdown-it-decorate** © 2015-2017, Rico Sta. Cruz. Released under the [MIT] License.<br>
 Authored and maintained by Rico Sta. Cruz with help from contributors ([list][contributors]).
 
 > [ricostacruz.com](http://ricostacruz.com) &nbsp;&middot;&nbsp;
