@@ -167,22 +167,22 @@ function applyToToken (token, attrs) {
   var todo = []
 
   while (attrs.length > 0) {
-    if (m = attrs.match(/^\s*\.([a-zA-Z0-9\-\_]+)/)) {
+    if (m = attrs.match(/^\s*\.([a-zA-Z0-9\-_]+)/)) {
       todo.push([ 'class', m[1], { append: true } ])
       shift()
-    } else if (m = attrs.match(/^\s*\#([a-zA-Z0-9\-\_]+)/)) {
+    } else if (m = attrs.match(/^\s*#([a-zA-Z0-9\-_]+)/)) {
       todo.push([ 'id', m[1] ])
       shift()
-    } else if (m = attrs.match(/^\s*([a-zA-Z0-9\-\_]+)="([^"]*)"/)) {
+    } else if (m = attrs.match(/^\s*([a-zA-Z0-9\-_]+)="([^"]*)"/)) {
       todo.push([ m[1], m[2] ])
       shift()
-    } else if (m = attrs.match(/^\s*([a-zA-Z0-9\-\_]+)='([^']*)'/)) {
+    } else if (m = attrs.match(/^\s*([a-zA-Z0-9\-_]+)='([^']*)'/)) {
       todo.push([ m[1], m[2] ])
       shift()
-    } else if (m = attrs.match(/^\s*([a-zA-Z0-9\-\_]+)=([^ ]*)/)) {
+    } else if (m = attrs.match(/^\s*([a-zA-Z0-9\-_]+)=([^ ]*)/)) {
       todo.push([ m[1], m[2] ])
       shift()
-    } else if (m = attrs.match(/^\s*([a-zA-Z0-9\-\_]+)/)) {
+    } else if (m = attrs.match(/^\s*([a-zA-Z0-9\-_]+)/)) {
       todo.push([ m[1], '' ])
       shift()
     } else if (m = attrs.match(/^\s+/)) {
