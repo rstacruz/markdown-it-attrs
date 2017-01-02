@@ -6,7 +6,7 @@ Annotate your Markdown documents with HTML comments to add classes to HTML eleme
 
 ```html
 This is some text.
-<!--{.center}-->
+<!-- {.center} -->
 ```
 
 ```html
