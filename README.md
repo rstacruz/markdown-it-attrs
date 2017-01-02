@@ -107,12 +107,21 @@ To go back to previous parent with the same name, add `^n` after the tag name, w
 
 ### Decorating code blocks
 
-You can decorate fenced code blocks. Indented code blocks are not supported, unfortunately.
+You can decorate code blocks. You may choose to decorate `pre`, `code`, or even both.
 
     ```
-    return true
+    return true;
     ```
     <!-- {code: .lang-javascript} -->
+
+Indented code blocks are only supported in markdown-it 7.x or later.
+
+```
+    // this is a code block
+    return true;
+
+<!-- {code: .lang-javascript} -->
+```
 
 ## Prior art
 
