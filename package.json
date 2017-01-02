@@ -18,6 +18,8 @@
     "test": "test"
   },
   "homepage": "https://github.com/rstacruz/markdown-it-decorate#readme",
+  "files": [
+  ],
   "keywords": [
     "attribute",
     "class",
