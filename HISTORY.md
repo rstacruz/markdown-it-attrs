@@ -1,9 +1,10 @@
 ## [v1.2.2]
 > Jan  2, 2017
 
-- Update documentation and devDependencies. Reduce npm download size. No functional changes.
+No functional changes.
 
-[v1.2.2]: https://github.com/rstacruz/markdown-it-decorate/compare/v1.2.1...v1.2.2
+- Update documentation and devDependencies
+- Reduce npm download size
 
 ## [v1.2.1]
 > Jan  3, 2016
@@ -52,3 +53,4 @@
 [v1.1.0]: https://github.com/rstacruz/markdown-it-decorate/compare/v1.0.0...v1.1.0
 [v1.2.0]: https://github.com/rstacruz/markdown-it-decorate/compare/v1.1.0...v1.2.0
 [v1.2.1]: https://github.com/rstacruz/markdown-it-decorate/compare/v1.2.0...v1.2.1
+[v1.2.2]: https://github.com/rstacruz/markdown-it-decorate/compare/v1.2.1...v1.2.2
