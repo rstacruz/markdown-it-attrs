@@ -55,15 +55,31 @@ You can specify the element name to decorate. (See [§ Disambiguating](#disambig
 
 ## Annotating elements
 
-Create an HTML comment in the format `<!-- {...} -->`, where `...` can be a `.class`, `#id`, `key=attr` or a combination of any of them. Be sure to render markdownIt with `html: true` to enable parsing of `<!--{comments}-->`.
+Create an HTML comment in the format `<!-- {...} -->`, where `...` can be a `.class`, `#id`, `key=attr` or a combination of any of them. The spaces around `{}` are optional. Be sure to render markdownIt with `html: true` to enable parsing of `<!--{comments}-->`.
 
-It will be applied to the deepest thing it's seen; ie, a blockquote containing a bold link (`> **[link]**`) will style the innermost element: the link.
+```html
+<!--{.class}-->
+<!-- {.class} -->
+<!-- {.class1.class2} -->
+<!-- {.class1 .class2} -->
+<!-- {#id} -->
+<!-- {attr="val"} -->
+```
 
 You can put the comment in the same line or in the next. I recommend keeping it on a separate line, since this will make GitHub ignore it.
 
+```html
+# Hello! <!-- {.center} -->
+```
+
+```html
+# Hello!
+<!-- {.center} -->
+```
+
 ## Disambiguating
 
-Annotations will apply itself to the deepest element preceding it. In the case below, `.wide` will be applied to the link (*"Next"*).
+By default, annotations will be applied to the deepest element preceding it. In the case below, `.wide` will be applied to the link (*"Next"*).
 
 ```md
 > This is a blockquote
@@ -74,6 +90,7 @@ Annotations will apply itself to the deepest element preceding it. In the case b
 ```
 
 ### Specifying elements
+
 To make it apply to a different element, precede your annotations with the tag name followed by a `:`.
 
 ```md
@@ -82,6 +99,7 @@ To make it apply to a different element, precede your annotations with the tag n
 ```
 
 ### Combining
+
 You can combine them as you need. In this example, the link gets `.button`, the list item gets `.wide`, and the blockquote gets `.bordered`.
 
 ```md
@@ -102,6 +120,7 @@ You can combine them as you need. In this example, the link gets `.button`, the 
 ```
 
 ### Selecting same names
+
 To go back to previous parent with the same name, add `^n` after the tag name, where `n` is how many levels deep to go back to. Using `^0` is the same as not specifying it at all. (This convention is taken from [gitrevisions](http://git-scm.com/docs/gitrevisions).)
 
 ```md
