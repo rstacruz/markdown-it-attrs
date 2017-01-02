@@ -5,12 +5,12 @@
 Annotate your Markdown documents with HTML comments to add classes to HTML elements. Supported for and tested on [markdown-it] 6.x, 7.x, and 8.x.
 
 ```html
-This is some text.
+Hello, from *Markdown*!
 <!-- {.center} -->
 ```
 
 ```html
-<p class='center'>This is some text.</p>
+<p class='center'>Hello, from <em>Markdown</em>!</p>
 ```
 
 [![Status](https://travis-ci.org/rstacruz/markdown-it-decorate.svg?branch=master)](https://travis-ci.org/rstacruz/markdown-it-decorate "See test builds")
