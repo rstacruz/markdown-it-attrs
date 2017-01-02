@@ -4,7 +4,7 @@
 
 Annotate your Markdown documents with HTML comments to add classes to HTML elements. Supported for and tested on [markdown-it] 6.x, 7.x, and 8.x.
 
-```md
+```html
 This is some text.
 <!--{.center}-->
 ```
@@ -20,8 +20,9 @@ This is some text.
 Install the `markdown-it-decorate` package alongside `markdown-it` (they are peer dependencies).
 
 ```sh
-npm install --save --save-exact markdown-it markdown-it-decorate
 yarn add --exact markdown-it markdown-it-decorate
+# or:
+npm install --save --save-exact markdown-it markdown-it-decorate
 ```
 
 `markdown-it-decorate` can be loaded as a plugin using `use()`.
