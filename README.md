@@ -32,6 +32,27 @@ const md = require('markdown-it')()
   .use(require('markdown-it-decorate'))
 ```
 
+## Cheatsheet
+
+You can add classes, ID's, or attributes. (See [§ Annotating elements](#annotating-elements))
+
+| Source | Output |
+|----|----|
+| `Text <!--{.center}-->` | `<p class='center'>Text</p>` |
+| `Text <!-- {.center} -->` | `<p class='center'>Text</p>` |
+| `# Hola <!-- {.center.red} -->` | `<h1 class='center red'>Hola</h1>` |
+| `# Hola <!-- {#top .hide} -->` | `<h1 id='top' class='hide'>Hola</h1>` |
+| `# Hola <!-- {data-show="true"} -->` | `<h1 data-show='true'>Hola</h1>` |
+| `![Image](img.jpg)<!-- {width=20} -->` | `<img src='img.jpg' alt='Image' width='20'>` |
+
+You can specify the element name to decorate. (See [§ Disambiguating](#disambiguating))
+
+| Source | Output |
+|----|----|
+| `# Hi *world* <!-- {.red} -->` | `<h1>Hi <em class='red'>world</em></h1>` |
+| `# Hi *world* <!-- {h1:.red} -->` | `<h1 class='red'>Hi <em>world</em></h1>` |
+| `# *Hi* *world* <!-- {em^1:.red} -->` | `<h1><em class='red'>Hi</em> <em>world</em></h1>` |
+
 ## Annotating elements
 
 Create an HTML comment in the format `<!-- {...} -->`, where `...` can be a `.class`, `#id`, `key=attr` or a combination of any of them. Be sure to render markdownIt with `html: true` to enable parsing of `<!--{comments}-->`.
@@ -39,16 +60,6 @@ Create an HTML comment in the format `<!-- {...} -->`, where `...` can be a `.cl
 It will be applied to the deepest thing it's seen; ie, a blockquote containing a bold link (`> **[link]**`) will style the innermost element: the link.
 
 You can put the comment in the same line or in the next. I recommend keeping it on a separate line, since this will make GitHub ignore it.
-
-#### Examples
-
-| Source | Output |
-|----|----|
-| `Text <!-- {.center} -->` | `<p class='center'>Text</p>` |
-| `# Hola <!-- {.center.red} -->` | `<h1 class='center red'>Hola</h1>` |
-| `# Hola <!-- {#top .hide} -->` | `<h1 id='top' class='hide'>Hola</h1>` |
-| `# Hola <!-- {data-show="true"} -->` | `<h1 data-show='true'>Hola</h1>` |
-| `![Image](img.jpg)<!-- {width=20} -->` | `<img src='img.jpg' alt='Image' width='20'>` |
 
 ## Disambiguating
 
@@ -62,7 +73,7 @@ Annotations will apply itself to the deepest element preceding it. In the case b
 > <!-- {.wide} -->
 ```
 
-#### Specifying elements
+### Specifying elements
 To make it apply to a different element, precede your annotations with the tag name followed by a `:`.
 
 ```md
@@ -70,7 +81,7 @@ To make it apply to a different element, precede your annotations with the tag n
 > * You can specify tag names. [Next](#next) <!-- {li:.wide} -->
 ```
 
-#### Combining
+### Combining
 You can combine them as you need. In this example, the link gets `.button`, the list item gets `.wide`, and the blockquote gets `.bordered`.
 
 ```md
@@ -90,7 +101,7 @@ You can combine them as you need. In this example, the link gets `.button`, the 
 </blockquote>
 ```
 
-#### Selecting same names
+### Selecting same names
 To go back to previous parent with the same name, add `^n` after the tag name, where `n` is how many levels deep to go back to. Using `^0` is the same as not specifying it at all. (This convention is taken from [gitrevisions](http://git-scm.com/docs/gitrevisions).)
 
 ```md
@@ -132,6 +143,7 @@ Indented code blocks are only supported in markdown-it 7.x or later.
 * [Kramdown](http://kramdown.gettalong.org/) (Ruby markdown parser) also supports the same syntax, also with a colon (`{: .class #id}`).
 
 ## Motivation
+
 markdown-it-decorate is inspired by the design of those features and improves on them:
 
 * Elements are marked via HTML comments; they'll be invisible to other Markdown parsers like GitHub's.
