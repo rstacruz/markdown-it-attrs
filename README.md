@@ -1,8 +1,8 @@
 # markdown-it-decorate
 
-Add attributes, IDs and classes to Markdown.
+> Add attributes, IDs and classes to Markdown
 
-[![Status](https://travis-ci.org/rstacruz/markdown-it-decorate.svg?branch=master)](https://travis-ci.org/rstacruz/markdown-it-decorate "See test builds")
+Annotate your Markdown documents with HTML comments to add classes to HTML elements. Supported for and tested on [markdown-it] 6.x, 7.x, and 8.x.
 
 ```md
 This is some text.
@@ -13,7 +13,18 @@ This is some text.
 <p class='center'>This is some text.</p>
 ```
 
+[![Status](https://travis-ci.org/rstacruz/markdown-it-decorate.svg?branch=master)](https://travis-ci.org/rstacruz/markdown-it-decorate "See test builds")
+
 ## Usage
+
+Install the `markdown-it-decorate` package alongside `markdown-it` (they are peer dependencies).
+
+```sh
+npm install --save --save-exact markdown-it markdown-it-decorate
+yarn add --exact markdown-it markdown-it-decorate
+```
+
+`markdown-it-decorate` can be loaded as a plugin using `use()`.
 
 ```js
 const md = require('markdown-it')()
