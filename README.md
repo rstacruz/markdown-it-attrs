@@ -138,3 +138,4 @@ Authored and maintained by Rico Sta. Cruz with help from contributors ([list][co
 
 [MIT]: http://mit-license.org/
 [contributors]: http://github.com/rstacruz/markdown-it-decorate/contributors
+[markdown-it]: https://www.npmjs.com/package/markdown-it
