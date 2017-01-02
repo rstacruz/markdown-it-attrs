@@ -220,21 +220,19 @@ test('fenced code blocks:', function (t) {
 })
 
 test('indented blocks:', function (t) {
-  // Sadly, it doesn't actually apply.
   run(t,
     '    hello\n' +
     '\n' +
     '<!--{code: .foo}-->',
-    '<pre><code>hello\n' +
+    '<pre class="foo"><code>hello\n' +
     '</code></pre>\n')
   t.end()
 })
 
 test('inline code:', function (t) {
-  // Also doesn't apply.
   run(t,
     'hi `there` <!--{code:.foo}-->',
-    '<p>hi <code>there</code></p>\n')
+    '<p>hi <code class="foo">there</code></p>\n')
 
   run(t,
     'hi *there* <!--{em:.foo}-->',
