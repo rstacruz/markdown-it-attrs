@@ -1,11 +1,13 @@
-'use strict'
+'use strict';
 /* eslint-disable no-cond-assign */
 
-var tagExpr = /^<!-- ?\{(?:([a-z0-9]+)(\^[0-9]*)?: ?)?(.*)\} ?-->\n?$/
+(function() {
 
-module.exports = function attributes (md) {
+function attributes (md) {
   md.core.ruler.push('curly_attributes', curlyAttrs)
 }
+
+var tagExpr = /^<!-- ?\{(?:([a-z0-9]+)(\^[0-9]*)?: ?)?(.*)\} ?-->\n?$/
 
 /*
  * List of tag -> token type mappings. Eg, `<li>` is `list_item_open`.
@@ -228,3 +230,13 @@ function spush (stack, token) {
   stack.types[type].push(token)
   stack.last = token
 }
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = attributes;
+} else if (typeof define === 'function' && define.amd) { // eslint-disable-line no-undef
+  define(function(){return attributes});
+} else {
+  this.MarkdownItDecorate = attributes;
+}
+
+})();
