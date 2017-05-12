@@ -3,11 +3,11 @@
 
 (function() {
 
+var tagExpr = /^<!-- ?\{(?:([a-z0-9]+)(\^[0-9]*)?: ?)?(.*)\} ?-->\n?$/
+
 function attributes (md) {
   md.core.ruler.push('curly_attributes', curlyAttrs)
 }
-
-var tagExpr = /^<!-- ?\{(?:([a-z0-9]+)(\^[0-9]*)?: ?)?(.*)\} ?-->\n?$/
 
 /*
  * List of tag -> token type mappings. Eg, `<li>` is `list_item_open`.
